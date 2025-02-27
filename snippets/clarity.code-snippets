@@ -1,0 +1,104 @@
+{
+  "Basic Document Structure": {
+    "prefix": "document",
+    "body": [
+      "document:",
+      "\thead:",
+      "\t\ttitle: \"${1:Page Title}\"",
+      "\t\tmeta charset=\"utf-8\"",
+      "\t\tmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"",
+      "\t",
+      "\tbody:",
+      "\t\th1: \"${2:Hello, Clarity!}\"",
+      "\t\t$0"
+    ],
+    "description": "Basic Clarity document structure"
+  },
+  "Style Block": {
+    "prefix": "style",
+    "body": [
+      "style:",
+      "\t\"\"\"",
+      "\t${1:body \\{",
+      "\t\tfont-family: sans-serif;",
+      "\t\\\\}}",
+      "\t\"\"\"",
+      "$0"
+    ],
+    "description": "CSS style block"
+  },
+  "Script Block": {
+    "prefix": "script",
+    "body": [
+      "script:",
+      "\t\"\"\"",
+      "\tdocument.addEventListener('DOMContentLoaded', function() {",
+      "\t\t${1:console.log('Page loaded');}",
+      "\t});",
+      "\t\"\"\"",
+      "$0"
+    ],
+    "description": "JavaScript script block"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for ${1:item} in ${2:$items}:",
+      "\t${3:li: $item}",
+      "$0"
+    ],
+    "description": "For loop"
+  },
+  "Conditional": {
+    "prefix": "if",
+    "body": [
+      "if ${1:$condition}:",
+      "\t${2:p: \"Condition is true\"}",
+      "$0"
+    ],
+    "description": "If statement"
+  },
+  "If-Else Conditional": {
+    "prefix": "ifelse",
+    "body": [
+      "if ${1:$condition}:",
+      "\t${2:p: \"Condition is true\"}",
+      "else:",
+      "\t${3:p: \"Condition is false\"}",
+      "$0"
+    ],
+    "description": "If-else statement"
+  },
+  "Variable Declaration": {
+    "prefix": "var",
+    "body": [
+      "$${1:variable_name} = \"${2:value}\"",
+      "$0"
+    ],
+    "description": "Variable declaration"
+  },
+  "Component Definition": {
+    "prefix": "component",
+    "body": [
+      "@component ${1:Name}(${2:parameters}):",
+      "\t${3:div class=\"${1:name}\":}",
+      "\t\t$0"
+    ],
+    "description": "Component definition"
+  },
+  "Component Use": {
+    "prefix": "@",
+    "body": [
+      "@${1:Component}(${2:\"Parameter\"})$0"
+    ],
+    "description": "Component usage"
+  },
+  "HTML Element": {
+    "prefix": "elem",
+    "body": [
+      "${1:div} ${2:class=\"container\"}:",
+      "\t$0"
+    ],
+    "description": "HTML element with attributes"
+  }
+}

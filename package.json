@@ -1,0 +1,45 @@
+{
+  "name": "clarity-language",
+  "displayName": "Clarity Language",
+  "description": "Syntax highlighting and tools for the Clarity language",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "license": "MIT",
+  "publisher": "luigichopper",
+  "contributes": {
+    "languages": [
+      {
+        "id": "clarity",
+        "aliases": ["Clarity", "clarity"],
+        "extensions": [".clar", ".clarity"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "clarity",
+        "scopeName": "source.clarity",
+        "path": "./syntaxes/clarity.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "clarity",
+        "path": "./snippets/clarity.code-snippets"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Clarity Vibrant",
+        "uiTheme": "vs-dark",
+        "path": "./themes/clarity-color-theme.json"
+      }
+    ]
+  }
+}

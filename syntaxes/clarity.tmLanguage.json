@@ -1,0 +1,92 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Clarity",
+	"patterns": [
+	  { "include": "#comment" },
+	  { "include": "#variable-declaration" },
+	  { "include": "#variable-reference" },
+	  { "include": "#component-definition" },
+	  { "include": "#component-use" },
+	  { "include": "#control-flow" },
+	  { "include": "#element-with-attributes" },
+	  { "include": "#element-without-attributes" },
+	  { "include": "#triple-quoted-string" },
+	  { "include": "#string" }
+	],
+	"repository": {
+	  "comment": {
+		"match": "#.*$",
+		"name": "comment.line.number-sign.clarity"
+	  },
+	  "variable-declaration": {
+		"match": "(\\$\\w+)\\s*(=)\\s*(.*)",
+		"captures": {
+		  "1": { "name": "variable.name.clarity entity.name.variable" },
+		  "2": { "name": "keyword.operator.assignment.clarity" },
+		  "3": { "name": "string.quoted.double.clarity" }
+		}
+	  },
+	  "variable-reference": {
+		"match": "\\$\\w+",
+		"name": "variable.name.clarity entity.name.variable constant.other"
+	  },
+	  "component-definition": {
+		"match": "(@component)\\s+(\\w+)\\s*(\\(.*\\))\\s*(:)",
+		"captures": {
+		  "1": { "name": "keyword.control.clarity storage.type.class" },
+		  "2": { "name": "entity.name.function.clarity entity.name.class" },
+		  "3": { "name": "variable.parameter.clarity" },
+		  "4": { "name": "punctuation.definition.block.clarity" }
+		}
+	  },
+	  "component-use": {
+		"match": "(@)(\\w+)(\\(.*\\))?",
+		"captures": {
+		  "1": { "name": "keyword.control.clarity" },
+		  "2": { "name": "entity.name.function.clarity entity.name.type support.class" },
+		  "3": { "name": "variable.parameter.clarity" }
+		}
+	  },
+	  "control-flow": {
+		"patterns": [
+		  {
+			"match": "\\b(if|else|for|in)\\b",
+			"name": "keyword.control.flow.clarity storage.type"
+		  }
+		]
+	  },
+	  "element-with-attributes": {
+		"match": "(\\w+)\\s+([^:]+)(:)",
+		"captures": {
+		  "1": { "name": "entity.name.tag.html.clarity markup.bold" },
+		  "2": { "name": "entity.other.attribute-name.html.clarity string.other" },
+		  "3": { "name": "punctuation.definition.block.clarity" }
+		}
+	  },
+	  "element-without-attributes": {
+		"match": "(\\w+)(:)",
+		"captures": {
+		  "1": { "name": "entity.name.tag.html.clarity markup.bold" },
+		  "2": { "name": "punctuation.definition.block.clarity" }
+		}
+	  },
+	  "string": {
+		"patterns": [
+		  {
+			"match": "\"([^\"\\\\]|\\\\.)*\"",
+			"name": "string.quoted.double.clarity"
+		  },
+		  {
+			"match": "'([^'\\\\]|\\\\.)*'",
+			"name": "string.quoted.single.clarity"
+		  }
+		]
+	  },
+	  "triple-quoted-string": {
+		"begin": "\"\"\"",
+		"end": "\"\"\"",
+		"name": "string.quoted.triple.clarity markup.raw"
+	  }
+	},
+	"scopeName": "source.clarity"
+  }

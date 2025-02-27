@@ -1,0 +1,91 @@
+{
+  "name": "Clarity Theme",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1E1E2E",
+    "editor.foreground": "#CDD6F4",
+    "editorLineNumber.foreground": "#6C7086",
+    "editorLineNumber.activeForeground": "#CBA6F7",
+    "editor.selectionBackground": "#45475A",
+    "editor.inactiveSelectionBackground": "#313244ea",
+    "editor.lineHighlightBackground": "#313244",
+    "editorCursor.foreground": "#F5E0DC"
+  },
+  "tokenColors": [
+    {
+      "name": "Comment",
+      "scope": ["comment", "comment.line.number-sign.clarity"],
+      "settings": {
+        "foreground": "#6C7086"
+      }
+    },
+    {
+      "name": "Variable",
+      "scope": ["variable.name.clarity", "entity.name.variable"],
+      "settings": {
+        "foreground": "#CBA6F7",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Tag",
+      "scope": ["entity.name.tag.html.clarity", "markup.bold"],
+      "settings": {
+        "foreground": "#74C7EC",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Attribute",
+      "scope": ["entity.other.attribute-name.html.clarity", "string.other"],
+      "settings": {
+        "foreground": "#A6E3A1"
+      }
+    },
+    {
+      "name": "String",
+      "scope": ["string.quoted.double.clarity", "string.quoted.single.clarity"],
+      "settings": {
+        "foreground": "#F9E2AF"
+      }
+    },
+    {
+      "name": "Triple-Quoted String",
+      "scope": ["string.quoted.triple.clarity", "markup.raw"],
+      "settings": {
+        "foreground": "#FAB387"
+      }
+    },
+    {
+      "name": "Component Definition",
+      "scope": ["keyword.control.clarity", "storage.type.class"],
+      "settings": {
+        "foreground": "#F38BA8",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Component Name",
+      "scope": ["entity.name.function.clarity", "entity.name.class", "entity.name.type", "support.class"],
+      "settings": {
+        "foreground": "#94E2D5",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Control Flow",
+      "scope": ["keyword.control.flow.clarity", "storage.type"],
+      "settings": {
+        "foreground": "#F38BA8",
+        "fontStyle": "bold italic"
+      }
+    },
+    {
+      "name": "Parameters",
+      "scope": ["variable.parameter.clarity"],
+      "settings": {
+        "foreground": "#89B4FA"
+      }
+    }
+  ]
+}
