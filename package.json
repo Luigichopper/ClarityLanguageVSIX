@@ -1,6 +1,6 @@
 {
   "name": "clarity-language",
-  "displayName": "Clarity Language",
+  "displayName": "ClarityScript",
   "description": "Syntax highlighting and tools for the Clarity language",
   "version": "0.1.0",
   "engines": {
